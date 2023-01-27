@@ -1,3 +1,23 @@
+# Visual Studio
+*.sdf
+*.user
+*.suo
+*.opensdf
+*.db
+Debug/
+ipch/
+x64/
+.vs/
+.DS_Store
+
+#tempfiles
+~$_*.*
+
+#codelite
+.clang/
+.codelite/
+Debug/
+
 # Prerequisites
 *.d
 

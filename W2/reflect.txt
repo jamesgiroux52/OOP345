@@ -1,0 +1,13 @@
+/*************************************************************
+// File    reflect.txt
+// Version 1.0
+// Date    January 26, 2023
+// Author  James Giroux - jgiroux1@myseneca.ca
+// Stu #   129198164
+// Description:
+// Workshop 2 reflection
+*************************************************************/
+
+The main topic that was covered in this workshop was an introduction to the rule of 5 instead of the rule of three. When creating a class that manages a dynamic resource we need to follow this rule so that we do not end up with memory leaks. The other new feature that was covered was an introduction to the 'chrono' library which is used to know and measure time throughout a piece of code or program.
+This workshop helped teach me how to use online resources to impliment library functions and how to cut down processing time using move operations instead of copying and assigning objects. I have previously used the string class, but that was also new in this workshop. The only issue I had was understanding that the string class assigns and manages the character array itself so I was a little unsure of how to make it a dynamic resource. Thank you for your help with that Cornel.
+Moving objects in memory is "orders of magnitude" faster than copying and assigning in the way we have been taught up to this point in the program, and it is very obvious that this would be the prefered way to work with objects when possible. Especially when we are working with large data sets, and our text file was only 10Mb, so I can see why this is very important. If we were working with massive databases or data files our program will be so much more efficent using move operations.
