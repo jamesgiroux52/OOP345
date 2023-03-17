@@ -1,0 +1,18 @@
+/*************************************************************
+// File    reflect.txt
+// Version 1.0
+// Date    February 7, 2023
+// Author  James Giroux - jgiroux1@myseneca.ca
+// Stu #   129198164
+// Description:
+// Workshop 4 Reflection
+*************************************************************/
+
+In this week's workshop we learned about different relationships between classes i.e. Composition and Aggregation and we learned how to work with double pointers.
+
+I had a bit of trouble with memory management in the ConfirmOrder module, but once you explained it to me it became more clear.
+The Child module is a composition because it manages everything to do with Toy while ConfirmOrder has an aggregation relationship with Toy.
+Composition relationships manage the objects creation and deletion, while aggregation relationships does not manage the resource, but both retain ownership of the Toy** member. Composition makes copies and needs to delete them but aggregation does not.
+The concept of a pointer to an array of pointers took some getting used to, but I think that biggest thing I learned was the relationships between classes and how to manage them when they are dynamically allocated.
+Thanks for the help professor!
+James

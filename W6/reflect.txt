@@ -1,0 +1,27 @@
+/*************************************************************
+// File    reflect.txt
+// Version 1.0
+// Date    March 10, 2023
+// Author  James Giroux - jgiroux1@myseneca.ca
+// Stu #   129198164
+// Description:
+// Workshop 6 Reflection
+*************************************************************/
+
+- manage polymorphic objects using the vector container of the STL
+- move a dynamically allocated object into a container
+- code a range-based iteration on the objects in a container
+- report and handle an exception
+
+This workshop was a lot of work, especially because of studying for the midterm and not starting it until the end of study week. 
+That being said I did not have any problems with the containers (ie vectors, lists, and their iterators). My main confusion was 
+with refreshing my knowledge of classes in a hirearchy.
+
+I had some issues with my output at first because I was adding new lines in Student, Professor, and Employee. But then I remembered that
+the caller (College) should always handle the new lines and my problem was resolved quickly.
+
+The select function in College was surprisingly easy, but it felt really good to get some more practice with passing logic to a function.
+
+Thanks again for your help, it seems that it is usually for something small, but it is very much appreciated none the less.
+
+James

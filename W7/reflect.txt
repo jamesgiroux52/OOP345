@@ -1,0 +1,32 @@
+/*************************************************************
+// File    reflect.txt
+// Version 1.0
+// Date    March 17, 2023
+// Author  James Giroux - jgiroux1@myseneca.ca
+// Stu #   129198164
+// Description:
+// Bakery module
+// -----------------------------------------------------------
+// I have done all the coding myself and only copied the
+// code that my professor provided to complete this workshop
+// -----------------------------------------------------------
+*************************************************************/
+
+This week's workshop was focused around the Standard Template Library (STL). This library contains many usefull functions and algorithms. These algorithms are very useful because they help us cut down on the amount of code we need to write and they are optimized and reviewed over time and with the release of new standards they are usually updated and/or improved.
+
+The sortBakery function would need to change becuase std::sort() uses random access iterators which std::list does not support. We would need to use std::list::sort() instead (i.e. listName.sort()).
+
+The algoritims I chose to use gave me a little trouble at first because I was only using the class notes as reference, and needed to use a couple of them in more than one function. Once I spoke to you and looked closer at cppreference.com I was able to resolve this issue.
+std::for_each() - I used this in the showGoods() function. This made the most sense to me because we want to print every item in the collection.
+std::accumulate() - This was also iused in the showGoods() function to add up the total number of stocked items and the total value of the items.
+std::sort() - I used this in the sortBakery() function because it was the obvious choice. I suppose I could have used stable_sort, that may have made it so that my output from visual studio would have matched the output provided in the workshop. but everything matched up when I tested in matrix.
+std::merge() - I used this in the combine() function after your suggestion not to use std::copy(). I had a little trouble implimenting it but once I called my sortBakery function and added the comparison lambda it worked perfectly.
+std::any_of() - I used this in inStock() to chech if an item had stock. Originally I was using count_if(), but I needed to use it in outOfStock(). Looking back count_if was clearly not the right choice anyway, even though it did work. any_of is a much better choice to find if a single item is in stock.
+std::count_if() - I used this in outOfStock() because I needed to know the size of the list that I would be returning.
+std::copy_if() - Also used in outOfStock() to copy the out of stock items into the list of items I would be returning.
+
+I enjoyed this workshop, but also understand that there are so many more algoritms built into the STL and appreciate that we are only scratching the surface in this workshop.
+
+As always, thank you for your help professor!
+
+James

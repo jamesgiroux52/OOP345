@@ -1,0 +1,22 @@
+/*************************************************************
+// File    reflect.txt
+// Version 1.0
+// Date    February 14, 2023
+// Author  James Giroux - jgiroux1@myseneca.ca
+// Stu #   129198164
+// Description:
+// Workshop 5 Reflection
+/*************************************************************
+
+- design and code a templated class that allocates and deallocates dynamic memory
+- design and code a function object
+- design and code a lambda expression
+- code a member function that receives the address of a callback function to execute
+- throw exceptions of different types
+- distinguish exception types from one another
+
+This workshop was intense. Part two took a lot of time and the Collection module was the most challenging. I'm confident with templated functions, but templated classes are more challenging for sure.
+Memory management wasn't an issue, it was more about understanding that a templated class can make assumptions. Like you explained to me 'this' doesn't really apply, because 'this' has nothing to do with the Collection, it's all about types. Understanding that Movie and Book need to be able to support operations inside the collection was what I really learned.
+Function pointers and observers were also a little hard to understand as well. At least at first. Once I had a working program adn was able to walk through it, it made a lot more sense.
+Lambdas were easy enough, I'm just not sure about why we would use them as opposed to a regular function.
+Exceptions make a lot of sense and I understand how to use them and why they would be very useful, especially in large applications or for debugging purposes. I had to do some research but it wasn't hard to understand.

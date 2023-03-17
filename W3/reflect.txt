@@ -1,0 +1,22 @@
+/*************************************************************
+// File    reflect.txt
+// Version 1.0
+// Date    February 5, 2023
+// Author  James Giroux - jgiroux1@myseneca.ca
+// Stu #   129198164
+// Description:
+// Workshop 3 reflection - Templates w/inheritance
+*************************************************************/
+
+Pair module:
+Pair(); 
+bool operator==(const Pair& P); 
+- needed for comparing two pairs to see if it is a duplicate or not
+std::ostream& display(std::ostream& os) const;   
+std::ostream& operator<<(std::ostream& os, const Pair& P);
+- bothe needed so that Collection knows how to display a pairs
+
+When using templates we need to keep all the code in the header file because templated functions do not get compiled unless they are used. This means that the implimentation must remain in the header file so that the compiler can create the correct versions of the functions for all the types it is called with.
+
+This workshop was the most challenging so far. I had a good understaning of function templates, but class templates are definitely more complicated to understand. I think the syntax is a lot to remember as well. It also took me a while to understand class variables when templated.
+Once I had spent time walking through my program it did all start to make sense, and I can see why templates are so powerful in programming. I know that c++ relies heavily on templates and I will continue to practice and play so that I understand them better.

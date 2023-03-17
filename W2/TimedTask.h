@@ -21,19 +21,17 @@
 
 namespace sdds {
 
-    // Task structure
-    struct Task {
-        char name[21]{};
-        char timeUnits[12]{};
-        std::chrono::steady_clock::duration duration{};
-    };
-
     // class to measure time between operations
     class TimedTask {
         std::chrono::steady_clock::time_point m_startTime{};
         std::chrono::steady_clock::time_point m_endTime{};
         int m_numStored{ 0 }; // number of tasks stored
-        Task m_task[10]{}; // tasks stored - max 10
+        // task structure - max 10
+        struct {
+            char name[21]{};
+            char timeUnits[12]{};
+            std::chrono::steady_clock::duration duration{};
+        } m_task[10];
     public:
         TimedTask();
         // used in main - must be public:
