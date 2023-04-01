@@ -87,19 +87,23 @@ namespace sdds {
         // sort based on 'str'
         if (str == "Description") {
             auto desc = [](const BakedGood& A, const BakedGood& B) { 
-                return A.m_desc < B.m_desc; };
+                return A.m_desc < B.m_desc; 
+            };
             std::sort(m_bakedGoods.begin(), m_bakedGoods.end(), desc);
         } else if (str == "Shelf") {
             auto shelfLife = [](const BakedGood& A, const BakedGood& B) { 
-                return A.m_shelfLife < B.m_shelfLife; };
+                return A.m_shelfLife < B.m_shelfLife; 
+            };
             std::sort(m_bakedGoods.begin(), m_bakedGoods.end(), shelfLife);
         } else if (str == "Stock") {
             auto stockCount = [](const BakedGood& A, const BakedGood& B) { 
-                return A.m_stockCount < B.m_stockCount; };
+                return A.m_stockCount < B.m_stockCount; 
+            };
             std::sort(m_bakedGoods.begin(), m_bakedGoods.end(), stockCount);
         } else if (str == "Price") {
             auto price = [](const BakedGood& A, const BakedGood& B) { 
-                return A.m_itemPrice < B.m_itemPrice; };
+                return A.m_itemPrice < B.m_itemPrice; 
+            };
             std::sort(m_bakedGoods.begin(), m_bakedGoods.end(), price);
         }
     }

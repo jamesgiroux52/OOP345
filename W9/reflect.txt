@@ -1,0 +1,24 @@
+// ***********************************************************
+// File    reflect.txt
+// Version 1.0
+// Date    March 22, 2023
+// Author  James Giroux - jgiroux1@myseneca.ca
+// Stu #   129198164
+// Description:
+// Workshop 9 reflection
+// ***********************************************************
+
+- was there any benefit from using binary files in this workshop?
+Unlike our previous workshop using binary files to implement low level encryption. This workshop was handling a large amount of data stored in the file. 500,000 records to be exact. This makes reading and writing to the file in binary much faster and also takes less code to read and write its just two lines of code instead of a loop. (line 71,75 & 171,172) It also makes the file smaller that it would be in text.
+
+- why would be important to bind a function to its arguments, and how was it useful in this workshop?
+Binding arguments to a function helps us modify existing functions to help us make a task easier or do it in another way. In this workshop we bound total_items as the divisor and using placeholders/previously calculated values (i.e avg) to call the compute functions in seperate threads. line 123, 132
+
+- the advantages of using multiple threads, and how did you accomplished multi-threading in this workshop?
+Because we were working with a very large array, using multithreading helped speed up the calculation times. From lines 117-137 I created two vectors of threads and created threads based on the num_threads member variable that is passed to the object from the client. Using that value num_threads, we split the array down into smaller chuncks to have the calculations done on those chuncks in seperate threads. Even though It seemed to be faster I didnt really notice the difference until I ran it in Matrix where the times took about 3x longer than what it did on my machine.
+
+In your reflect, include discussion on your observation of the computation times with three different values of the above parameters.
+std::this_thread::sleep_for(std::chrono::nanoseconds(x)); 
+- As I said above it was hard to gauge the performance when running this program on my computer. I have a 6 core i7 @2.4Ghz. I noticed that the computations usually took the longest with one thread, but sometimes 2 or 4 threads took longer. After testing with the sleep_for method it became more clear that more threads equals less processing time. This became even more clear when testing on matrix, I assume because there are so many threads running on that server, my program was waiting in line most of the time and took orders of magnitude longer than on my local machine even when only sleeping for 1ms. I also noticed that using 4 threads was usually a little bit longer than using two, not by much, when I did not have any sleep_for statements.
+
+It's easy to see how multithreading is super usefull for large data sets and to spped up computatin times. I even did some tests with larger binary files with 10,000,000 records and that became more clear on my local machine that paralell processing the data is much more efficint than using only the main thread.

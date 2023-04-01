@@ -1,0 +1,21 @@
+// ***********************************************************
+// File    reflect.txt
+// Version 1.0
+// Date    March 24, 2023
+// Author  James Giroux - jgiroux1@myseneca.ca
+// Stu #   129198164
+// Description:
+// Workshop 8 - Reflection
+// ***********************************************************
+
+- what changes you had to make in *part 1* to transform the class into a templated one?
+We have to move all of the function definitions into the header file and updat all the syntax to template syntax. We need to keep everything in the header file becaus emutiple definitions of the same functon could be created during compilation causing a compilation failure. As long as we have header guards in place, then the templated members will only get created as needed and not more than once.
+
+- a class that allows only one instance to be created is called a *singleton*. Can you think at another way to create a singleton without using static members? How would that object be managed?
+From  what I understand the other way we could do this without Database having static members would be to have the singelton stored in another class.
+
+- the class `Database` has a resource attribute (the database instance), yet no copy/move operations were implemented. Is that a bug (justify your answer)?
+The instance is of type shared_ptr and that class handles all of the management for us including memory management and move/copy operations.
+
+- we said that the class `Database` can be instantied only once, yet in the output we see that the custom constructor is called twice (same for the destructor). Explain.
+I believe that this is because we have two different tyoes getting constructed. One is a string and the other is long long. Therefore we have two different class templates that get implimented by the compiler.
